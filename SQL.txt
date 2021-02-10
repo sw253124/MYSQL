@@ -1,0 +1,61 @@
+DATE SHOULD BE UPDATED AS 25/04/2012
+('5005','Pit Alex','London','0.11'),
+('5006','Mc Lyon','Paris','0.14');
+
+1.CREATE TABLE SALES(Salesmanid Int,Name varchar(225),City varchar(225),Commision Float(3));
+
+INSERT INTO SALES(SALESMANID,Name,City,Commision) VALUES
+('5001','James Hoog','New York','0.15'),
+('5002','Nail Knite','Paris','0.13'),
+('5005','Pit Alex','London','0.11'),
+('5006','Mc Lyon','Paris','0.14'),
+('5003','Lauson Hen','Sydney','0.12'),
+('5007','Paul Adam','Rome','0.13');
+
+2.SELECT "SALESMANID","NAME" FROM SALES;
+
+3.Select * FROM SALES ORDER BY "NAME" ASC;
+
+4.Select "NAME","CITY" FROM SALES WHERE CITY='Paris';
+
+5.Select "SALESMANID" FROM SALES WHERE CITY='Paris' OR CITY='Rome';
+
+6.Select "NAME" FROM SALES WHERE "NAME" NOT BETWEEN 'A' AND 'K';
+
+7.
+CREATE TABLE GRADE(Customerid Int,CustomerName varchar(225),City varchar(225),Grade Int,SalesmanID Int);
+
+INSERT INTO 
+GRADE(Customerid,CustomerName,City,Grade,SalesmanID) 
+VALUES
+('3002','Nick Rimando','New York','100','5001'),
+('3005','Graham Zusi','California','200','5002'),
+('3001','Brad Guzan','London','','5005'),
+('3004','Fabian Johns','Paris','300','5006'),
+('3007','Brad Davis','New York','200','5001'),
+('3009','Geoff Camero','Berlin','100','5003')
+('3008','Julian Green','London','300','5002')
+('3002','Jozy Altidon','Moscow','200','5007'); 
+
+7.Select * from GRADE where GRADE='200';
+
+8.Select AVG(PRO_PRICE) FROM PRODUCT where PRO_COM='16';
+
+9.Select "PRO_NAME","PRO_PRICE" FROM PRODUCT where PRO_COM=(Select MIN(PRO_COM) FROM PRODUCT);
+
+10.Select DISTINCT "EMP_DEPT" FROM EMPLOYEEN;
+
+11.Select * FROM GRADE WHERE grade >100;
+
+12.SELECT * FROM GRADE WHERE city='New York' AND grade > 100;
+13.SELECT * FROM GRADE WHERE city='New York' OR grade > 100;
+
+14.Select * FROM ORDERN WHERE NOT ORD_DATE = '10-09-12' AND(PURCH_AMT < '1000' AND SALESMAN_ID='5005');
+
+15 I)Select * FROM ORDERN WHERE NOT ORD_DATE = '17-08-12' AND NOT CUSTMOER_ID > '3005';
+ii)Select * FROM ORDERN WHERE NOT PURCH_AMT < '1000';
+
+
+TABLES:
+SATER
+
